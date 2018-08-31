@@ -7,7 +7,7 @@
 function getQuestion() {
 	client=new XMLRequest();
 	
-	client.open('GET','http://developer.cege.ucl.ac.uk:30287');
+	client.open('GET','http://developer.cege.ucl.ac.uk:30287/quizdata/geom');
 	client.onreadystatechange=questionResponse;
 	client.send();
 }
@@ -43,15 +43,15 @@ function loadquestionlayer(questiondata) {
 
 //data upload to database
 function startDataUpload() {
-	var Question = document.getElementById("Question").value;
-	var AnswerOne = document.getElementById("AnswerOne").value;
-	var AnswerTwo = document.getElementById("AnswerTwo").value;
-	var AnswerThree = document.getElementById("AnswerThree").value;
-	var AnswerFour = document.getElementById("AnswerFour").value;
-	var Correct = document.getElementById("Correct").value;
-	var Longitude = document.getElementById("Longitude").value;
-	var Latitude = document.getElementById("Latitude").value;
-	var postString = "Question="+Question+"&AnswerOne="+AnswerOne=+"&AnswerTwo="+AnswerTwo=+"&AnswerThree="+AnswerThree=+"&AnswerFour="+AnswerFour+"&Correct="+ Correct + "&Latitude" + Latitude +"&Longitude" + Longitude;
+	var Question = document.getElementById("question").value;
+	var AnswerOne = document.getElementById("answerone").value;
+	var AnswerTwo = document.getElementById("answertwo").value;
+	var AnswerThree = document.getElementById("answerthree").value;
+	var AnswerFour = document.getElementById("answerfour").value;
+	var Correct = document.getElementById("correct").value;
+	var Longitude = document.getElementById("longitude").value;
+	var Latitude = document.getElementById("latitude").value;
+	var postString = "question="+question+"&answerone="+answerone=+"&answertwo="+answertwo=+"&answerthree="+answerthree=+"&answerfour="+answerfour+"&correct="+ correct + "&latitude" + latitude +"&longitude" + longitude;
 	processData(postString);
 	//alert for upload
 	alert ("Question Upload");
