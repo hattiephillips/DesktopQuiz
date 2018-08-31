@@ -48,10 +48,10 @@ function startDataUpload() {
 	var AnswerTwo = document.getElementById("answertwo").value;
 	var AnswerThree = document.getElementById("answerthree").value;
 	var AnswerFour = document.getElementById("answerfour").value;
-	var Correct = document.getElementById("correct").value;
+	var Correct = document.getElementById("correctanswer").value;
 	var Longitude = document.getElementById("longitude").value;
 	var Latitude = document.getElementById("latitude").value;
-	var postString = "question="+question+"&answerone="+answerone=+"&answertwo="+answertwo=+"&answerthree="+answerthree=+"&answerfour="+answerfour+"&correct="+ correct + "&latitude" + latitude +"&longitude" + longitude;
+	var postString = "question="+question+"&answerone="+answerone=+"&answertwo="+answertwo=+"&answerthree="+answerthree=+"&answerfour="+answerfour+"&correctanswer="+ correctanswer + "&latitude" + latitude +"&longitude" + longitude;
 	processData(postString);
 	//alert for upload
 	alert ("Question Upload");
